@@ -513,7 +513,7 @@ for s:directory in g:templates_directory
 	let s:directory = <SID>NormalizePath(expand(s:directory) . '/')
 	if isdirectory(s:directory)
 		execute "au BufNewFile,BufRead "
-					\. s:directory . "/" . g:templates_global_name_prefix . "* "
+					\. s:directory . "/" . g:templates_name_prefix . "* "
 					\. "let b:vim_template_subtype = &filetype | "
 					\. "set ft=vim-template"
 	endif
